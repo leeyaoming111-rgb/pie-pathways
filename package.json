@@ -1,0 +1,38 @@
+{
+  "name": "pie-pathways",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pie Pathways — a concept routing prototype for Pie Funds. Guided flow demo plus an evaluation harness.",
+  "scripts": {
+    "sync": "node scripts/sync-knowledge.mjs",
+    "predev": "npm run sync",
+    "dev": "next dev",
+    "prebuild": "npm run sync",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "eval": "tsx scripts/eval.ts",
+    "eval:ci": "tsx scripts/eval.ts --ci",
+    "eval:compare": "tsx scripts/compare.ts",
+    "build:routes": "tsx scripts/build-routes.ts",
+    "verify": "npm run lint && npm run typecheck && npm run build && npm run eval:ci"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.3.4",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

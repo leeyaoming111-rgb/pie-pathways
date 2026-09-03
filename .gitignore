@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+.env*
+!.env.example
+
+# Optional live scrape output (Stage 1, P2). The app runs on the committed
+# fixture without it; `npm run build:routes` regenerates it.
+/data/routes.json
