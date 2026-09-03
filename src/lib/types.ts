@@ -54,7 +54,7 @@ export interface JourneyState {
   /** Wealth branch. */
   wealthInvestor?: "individual" | "trust" | "entity";
   wealthNeed?: "portfolio" | "planning" | "general";
-  wealthRange?: "under_250k" | "250k_1m" | "over_1m";
+  wealthRange?: "under_250k" | "250k_1m" | "over_1m" | "skipped";
   /** Existing-client branch. */
   serviceAction?:
     | "portal"

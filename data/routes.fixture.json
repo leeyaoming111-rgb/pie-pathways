@@ -1,0 +1,216 @@
+{
+  "kiwisaver": {
+    "url": "/kiwisaver",
+    "summary": "The Pie KiwiSaver Scheme, its four funds, the Fund Chooser tool, and what you need to join.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [
+      {
+        "name": "Conservative",
+        "description": null,
+        "timeframe": "3+ years",
+        "risk_rating": "Lower",
+        "status": null
+      },
+      {
+        "name": "Balanced",
+        "description": null,
+        "timeframe": "5+ years",
+        "risk_rating": "Medium",
+        "status": null
+      },
+      {
+        "name": "Growth",
+        "description": null,
+        "timeframe": "7+ years",
+        "risk_rating": "Higher",
+        "status": null
+      },
+      {
+        "name": "Aggressive",
+        "description": null,
+        "timeframe": "10+ years",
+        "risk_rating": "Higher",
+        "status": null
+      }
+    ],
+    "insights": [
+      {
+        "title": "KiwiSaver Insights",
+        "date": null,
+        "summary": "Article feed on the KiwiSaver page."
+      }
+    ],
+    "scrape_errors": []
+  },
+  "funds": {
+    "url": "/Investment-Funds",
+    "summary": "Pie's actively managed investment funds, grouped as Australasian, Global, and Diversified and Fixed Income.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [
+      {
+        "name": "Growth",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Growth 2",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Dividend Growth",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": "Closed to new investment"
+      },
+      {
+        "name": "Emerging Companies",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": "Closed to new investment"
+      },
+      {
+        "name": "Global Growth",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Global Growth 2",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Growth UK & Europe",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Conservative",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Chairman's",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Fixed Income",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      },
+      {
+        "name": "Property & Infrastructure",
+        "description": null,
+        "timeframe": null,
+        "risk_rating": null,
+        "status": null
+      }
+    ],
+    "insights": [
+      {
+        "title": "Investor Insights",
+        "date": null,
+        "summary": "Article feed on the Investment Funds page, including the monthly \"A message from Mike\" series."
+      }
+    ],
+    "scrape_errors": []
+  },
+  "advice": {
+    "url": "/Investment-Funds/Investment-Advice",
+    "summary": "Pie's investment advice service, for investors who want a conversation before they invest.",
+    "summary_source": "generated",
+    "threshold": {
+      "value": 250000,
+      "source": "scraped"
+    },
+    "funds": [],
+    "insights": [],
+    "scrape_errors": []
+  },
+  "wealth": {
+    "url": "/Wealth-Management",
+    "summary": "Pie Wealth, a boutique advice service best suited to individuals, family trusts and entities with $1 million or more to invest.",
+    "summary_source": "generated",
+    "threshold": {
+      "value": 1000000,
+      "source": "verified"
+    },
+    "funds": [],
+    "insights": [
+      {
+        "title": "Five investment pillars",
+        "date": null,
+        "summary": "In-depth research over hype; long-term tailwinds; skin in the game; knowing the people behind businesses; holding cash for a rainy day."
+      }
+    ],
+    "scrape_errors": []
+  },
+  "performance": {
+    "url": "/Performance",
+    "summary": "Published performance figures for Pie's funds, shown with the periods and sources they are reported against.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [],
+    "insights": [],
+    "scrape_errors": []
+  },
+  "insights": {
+    "url": "/Market-Insights",
+    "summary": "Pie's market commentary, including the monthly \"A message from Mike\" and the Slice of Pie newsletter.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [],
+    "insights": [
+      {
+        "title": "A message from Mike",
+        "date": null,
+        "summary": "Monthly commentary from founder and Chief Investment Officer Mike Taylor."
+      },
+      {
+        "title": "Slice of Pie",
+        "date": null,
+        "summary": "Pie's monthly newsletter."
+      }
+    ],
+    "scrape_errors": []
+  },
+  "documents": {
+    "url": "/Investor-Documents",
+    "summary": "Forms, Product Disclosure Statements and reports, including the forms that have to be completed on paper.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [],
+    "insights": [],
+    "scrape_errors": []
+  },
+  "contact": {
+    "url": "/contact-us",
+    "summary": "A direct line to Pie's client services team, by phone on 0800 586 657 or +64 9 486 1701, or by email.",
+    "summary_source": "generated",
+    "threshold": null,
+    "funds": [],
+    "insights": [],
+    "scrape_errors": []
+  }
+}

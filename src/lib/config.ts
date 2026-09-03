@@ -22,7 +22,13 @@ export interface Threshold {
   readonly note: string;
 }
 
-export const THRESHOLDS: Record<string, Threshold> = {
+export type ThresholdKey =
+  | "fundsMinimum"
+  | "investmentAdvice"
+  | "pieWealth"
+  | "chairmansFund";
+
+export const THRESHOLDS: Record<ThresholdKey, Threshold> = {
   /** Investment Funds minimum — UNVERIFIED. Logic only, never UI copy. */
   fundsMinimum: {
     value: 25_000,
@@ -62,7 +68,7 @@ export const THRESHOLDS: Record<string, Threshold> = {
 } as const;
 
 /** Guard used by UI components before printing any threshold. */
-export function uiThreshold(key: keyof typeof THRESHOLDS): string {
+export function uiThreshold(key: ThresholdKey): string {
   const t = THRESHOLDS[key];
   if (!t.uiSafe || t.uiCopy === null) {
     throw new Error(

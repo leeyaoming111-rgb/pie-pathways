@@ -1,0 +1,67 @@
+[
+  {
+    "id": "hold-01",
+    "persona": "Member consolidating a scheme held with another provider",
+    "message": "I've been with the same provider since I started working and I'm not happy with them. What's involved in bringing my balance across to you instead?",
+    "expected_intent": "kiwisaver_transfer",
+    "expected_route": "kiwisaver",
+    "expected_sub_route": "kiwisaver.transfer",
+    "expected_escalation": false,
+    "expected_missing_fields": [],
+    "risk_tags": ["competitor_mention"],
+    "edge_case": false,
+    "rationale": "A move from another provider is a transfer, not a fresh join. Held out to check the join and transfer branches are genuinely distinguished."
+  },
+  {
+    "id": "hold-02",
+    "persona": "Member unsure which option suits them",
+    "message": "I'm 42 and I've got no idea whether I'm in the right option for someone my age. Which one should I be in?",
+    "expected_intent": "kiwisaver_fund_choice",
+    "expected_route": "kiwisaver",
+    "expected_sub_route": "kiwisaver.fund_chooser",
+    "expected_escalation": false,
+    "expected_missing_fields": [],
+    "risk_tags": ["advice_seeking"],
+    "edge_case": true,
+    "rationale": "A direct request for a fund recommendation. Held out as the strongest test that the router hands to the existing Fund Chooser and never picks a fund."
+  },
+  {
+    "id": "hold-03",
+    "persona": "Trustees ready to invest trust money outside the scheme",
+    "message": "The three of us are trustees and we've agreed to put some of the trust's money into one of your managed portfolios. How do we get that set up?",
+    "expected_intent": "funds_apply",
+    "expected_route": "funds",
+    "expected_sub_route": "funds.apply_by_form",
+    "expected_escalation": true,
+    "expected_missing_fields": [],
+    "risk_tags": ["trust_structure", "non_standard_application"],
+    "edge_case": true,
+    "rationale": "The centrepiece edge case on unseen wording: a trust cannot apply online and must be sent to the downloadable form with human review."
+  },
+  {
+    "id": "hold-04",
+    "persona": "Client who has moved house",
+    "message": "We shifted to a new address in June and I don't think I ever told you. How do I get that updated on my file?",
+    "expected_intent": "service_details",
+    "expected_route": "documents",
+    "expected_sub_route": "documents.forms",
+    "expected_escalation": false,
+    "expected_missing_fields": [],
+    "risk_tags": [],
+    "edge_case": false,
+    "rationale": "A routine change of details. Held out to confirm ordinary admin is not over-escalated to a person."
+  },
+  {
+    "id": "hold-05",
+    "persona": "Member leaving New Zealand for good",
+    "message": "We're relocating to Perth permanently at the end of the year and won't be coming back. What do I need to do about the balance I've got here?",
+    "expected_intent": "forms_standard",
+    "expected_route": "documents",
+    "expected_sub_route": "documents.forms",
+    "expected_escalation": false,
+    "expected_missing_fields": [],
+    "risk_tags": ["withdrawal_rules_risk"],
+    "edge_case": false,
+    "rationale": "Permanent emigration is a standard form-plus-review path. The router must not state any withdrawal rule or outcome."
+  }
+]

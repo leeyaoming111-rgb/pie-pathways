@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens from pie-funds-brand.md §1. The palette is warm-neutral rather
+ * than cold-grey: cream and sage tones, generous whitespace, with charcoal
+ * sections carrying white type.
+ *
+ * #94F587 fails contrast as text on white, so it is used only for fills,
+ * button backgrounds and highlight chips, always with #1D1D1F on top.
+ */
+@theme {
+  --color-pie-green: #94f587;
+  --color-pie-green-deep: #6fd961;
+  --color-pie-charcoal: #474a47;
+  --color-pie-ink: #1d1d1f;
+  --color-pie-cream: #efefed;
+  --color-pie-light: #f5f5f5;
+  --color-pie-border: #d5d4ce;
+  --color-pie-sage: #bcbdb4;
+
+  /*
+   * Euclid Circular A is Pie's brand font and is self-hosted on the live site.
+   * No licensed font files ship with this prototype, so it is named first and
+   * the stack falls back to Arial/system sans. Weight contrast carries the
+   * hierarchy instead. No geometric Google font is substituted.
+   */
+  --font-sans: "Euclid Circular A", "Euclid", Arial, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-pie-cream);
+    color: var(--color-pie-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Focus is always visible and always on the warm palette, never removed. */
+  :focus-visible {
+    outline: 2px solid var(--color-pie-ink);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
