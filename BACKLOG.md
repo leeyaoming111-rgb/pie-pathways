@@ -61,10 +61,18 @@ section.
 
 ## Known limitations of what was built
 
-- **The scraper cannot reach the site.** piefunds.co.nz returns HTTP 403 to it.
-  The scraper honours that rather than spoofing a browser User-Agent, so the
-  live-scrape path is implemented and tested against synthetic input but has
-  never run against the real site. The fixture path is unaffected.
+- **Nothing in this sandbox can reach the open internet.** piefunds.co.nz
+  returns HTTP 403, and so does a Playwright request to `example.com` — this
+  session's network egress policy allowlists a small set of hosts (npm,
+  GitHub, Anthropic infra) and denies everything else, piefunds.co.nz included.
+  Playwright is installed and does work (it reached the allowlisted hosts
+  fine); it's the network policy, not the tool or the site, that blocks it.
+  The scraper honours that rather than spoofing a browser User-Agent or trying
+  to route around it, so the live-scrape path is implemented and tested
+  against synthetic input but has never run against the real site. The
+  fixture path is unaffected. Real reference screenshots of piefunds.co.nz can
+  only come from outside this sandbox — either uploaded as files, or captured
+  in an environment whose network policy allows the site.
 - **Fund-card extraction is unproven.** It expects the documented
   name/timeframe/risk-rating shape and records an error rather than guessing
   otherwise — but that shape has never been tested against real markup.

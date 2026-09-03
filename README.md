@@ -96,10 +96,16 @@ which is used **only if it is present and passes validation**. All three paths
 are tested: valid file used, invalid file rejected, absent file falls back to the
 fixture. The developer panel reports which is in use.
 
-At the time of writing, piefunds.co.nz returns **HTTP 403** to the scraper —
-the site's own bot protection, not a network problem. The scraper records that
-and stops rather than spoofing a browser User-Agent, and writes no file when
-nothing was reachable. **The app has never depended on the scrape.**
+At the time of writing, piefunds.co.nz returns **HTTP 403** to the scraper.
+This was first attributed to the site's own bot protection; a later check with
+Playwright showed the same policy-denial response from an unrelated, innocuous
+host (`example.com`), which means it is this session's own network egress
+policy blocking outbound requests to arbitrary websites — not something
+piefunds.co.nz is doing. The scraper records the failure and stops rather than
+spoofing a browser User-Agent or otherwise working around it (the sandbox's own
+guidance is explicit: report a policy-denied host, don't route around it), and
+writes no file when nothing was reachable. **The app has never depended on the
+scrape.**
 
 ## Evaluation
 

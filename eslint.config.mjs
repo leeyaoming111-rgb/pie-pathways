@@ -12,6 +12,9 @@ const eslintConfig = [
       "next-env.d.ts",
       "eval-results/**",
       "src/lib/knowledge.generated.ts",
+      // Vendored Claude Code skill packages under .claude/skills/ — third-party
+      // tooling scripts, not app code. Not ours to lint.
+      ".claude/**",
     ],
   },
   ...coreWebVitals,
