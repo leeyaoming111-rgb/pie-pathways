@@ -175,7 +175,7 @@ const COPY: Record<string, CopyBlock> = {
   advice: standard({
     title: "Investment Advice",
     summary: "A conversation with Pie's advice team before you commit to anything.",
-    why: `You asked to talk it through rather than pick something yourself. Pie's advice service is built for that conversation. Nothing here confirms what you qualify for — the team works that out with you.`,
+    why: "You asked to talk it through rather than pick something yourself. Pie's advice service is built for that conversation. This is an enquiry only — the team confirms what applies to your situation.",
     whatToHaveReady: [
       "A rough figure and timeframe",
       "What you want the money to do",
@@ -335,7 +335,7 @@ export const ESCALATION_CONTACTS = [
 ] as const;
 
 /** Every distinct piece of outcome text, for the Stage 4a no-recommendation scan. */
-export function outcomeText(pathway: PathwayDefinition): string {
+export function outcomeText(pathway: CopyBlock): string {
   return [
     pathway.title,
     pathway.summary,
@@ -345,4 +345,20 @@ export function outcomeText(pathway: PathwayDefinition): string {
     ...(pathway.secondaryLinks ?? []).map((l) => l.label),
     pathway.privacyNote ?? "",
   ].join(" \n");
+}
+
+/**
+ * Every outcome copy block in the table, whether or not a persona happens to
+ * reach it.
+ *
+ * Scanning only the copy the personas touch leaves the rest unguarded: a
+ * recommendation planted on a route no persona visits would ship unnoticed. The
+ * audit is over the table itself, so coverage does not depend on the test set.
+ */
+export function allOutcomeCopy(): { key: string; why: string; text: string }[] {
+  return Object.entries(COPY).map(([key, block]) => ({
+    key,
+    why: block.why,
+    text: outcomeText(block),
+  }));
 }
