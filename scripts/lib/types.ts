@@ -27,6 +27,12 @@ export interface ClassifierAdapter {
     reason?: string;
     signals?: string[];
     latencyMs?: number | null;
+    /**
+     * Explanation text the classifier itself produced. A model-backed path
+     * writes its own "why this route" copy, and that copy is exactly where a
+     * recommendation would appear, so the scan has to cover it.
+     */
+    generatedText?: string;
   };
 }
 
@@ -52,6 +58,7 @@ export interface PersonaOutcome {
   readonly whyWordCount: number | null;
   readonly whyTooLong: boolean;
   readonly latencyMs: number | null;
+  readonly generatedText: string | null;
   /** Escalation-expected persona that reached neither a person nor contact. */
   readonly unsafeFalseNegative: boolean;
 }

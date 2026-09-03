@@ -1,8 +1,8 @@
 {
   "set": "dev",
-  "classifier": "heuristic",
-  "classifierDescription": "Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default",
-  "generatedAt": "2026-09-03T16:48:52.705Z",
+  "classifier": "prompt:v3",
+  "classifierDescription": "prompt v3 (61 lines) — mock mode, offline fixtures",
+  "generatedAt": "2026-09-03T16:45:44.208Z",
   "outcomes": [
     {
       "persona": {
@@ -73,9 +73,9 @@
         }
       ],
       "pass": true,
-      "reason": "A clear request to join the scheme, with nothing that complicates it.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "kiwisaver_join"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -154,9 +154,9 @@
         }
       ],
       "pass": true,
-      "reason": "Adding to or drawing on an existing investment is handled by form.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "add_withdraw"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -235,9 +235,9 @@
         }
       ],
       "pass": true,
-      "reason": "Changing a bank account or a direct debit is a form, not a self-service action.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "direct_debit"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -316,9 +316,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks how to move between funds. The router gives the process and never endorses a destination fund.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "fund_switch"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -395,9 +395,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks for a conversation before investing, so this routes to the advice service.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "advice_enquiry"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -475,9 +475,9 @@
         }
       ],
       "pass": true,
-      "reason": "A trust, entity or tailored request. This is an enquiry for the private wealth team, not an eligibility decision.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "wealth_enquiry"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -557,9 +557,9 @@
         }
       ],
       "pass": true,
-      "reason": "Mentions a death or an estate, which always goes to a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "bereavement"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -640,9 +640,9 @@
         }
       ],
       "pass": true,
-      "reason": "Describes illness or financial hardship. The router never states what applies — a person does.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "serious_illness"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -724,9 +724,9 @@
         }
       ],
       "pass": true,
-      "reason": "Raises fraud, identity or a complaint, which is time-critical and needs a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "fraud_identity_complaint"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -805,9 +805,9 @@
         }
       ],
       "pass": true,
-      "reason": "This is an access problem with the online account, not a security incident.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "portal_access"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -890,9 +890,9 @@
         }
       ],
       "pass": true,
-      "reason": "No task was expressed, so the right move is to ask rather than guess.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "explicit_browsing"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -969,9 +969,9 @@
         }
       ],
       "pass": true,
-      "reason": "Wants commentary and approach rather than a product or an application.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "research_commentary"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1000,17 +1000,17 @@
         "rationale": "Rambling paragraph below the advice band. The router navigates to the fund range and must never tell anyone they cannot get advice or state a minimum."
       },
       "raw": {
-        "intent": "funds_info",
-        "route": "funds",
-        "confidence": 0.75,
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.66,
         "human_review_required": false,
         "personal_advice_generated": false,
         "missing_fields": []
       },
       "result": {
-        "intent": "funds_info",
-        "route": "funds",
-        "confidence": 0.75,
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.66,
         "human_review_required": false,
         "personal_advice_generated": false,
         "missing_fields": []
@@ -1021,14 +1021,14 @@
         {
           "field": "intent",
           "expected": "funds_info",
-          "actual": "funds_info",
-          "pass": true
+          "actual": "advice_enquiry",
+          "pass": false
         },
         {
           "field": "route",
           "expected": "funds",
-          "actual": "funds",
-          "pass": true
+          "actual": "advice",
+          "pass": false
         },
         {
           "field": "sub_route",
@@ -1049,14 +1049,14 @@
           "pass": true
         }
       ],
-      "pass": true,
-      "reason": "Wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "pass": false,
+      "reason": "Mock fixture response.",
       "signals": [
-        "funds_info"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
-      "whyWordCount": 34,
+      "whyWordCount": 33,
       "whyTooLong": false,
       "latencyMs": null,
       "generatedText": null,
@@ -1133,9 +1133,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks whether to move money during market worry. Answering that would be personal advice, so it goes to a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "market_anxiety"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1163,19 +1163,17 @@
         "rationale": "Conflicting facts. Route on the expressed task, not on the largest number in the message."
       },
       "raw": {
-        "intent": "kiwisaver_manage",
-        "route": "kiwisaver",
-        "sub_route": "kiwisaver.manage",
-        "confidence": 0.82,
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.72,
         "human_review_required": false,
         "personal_advice_generated": false,
         "missing_fields": []
       },
       "result": {
-        "intent": "kiwisaver_manage",
-        "route": "kiwisaver",
-        "sub_route": "kiwisaver.manage",
-        "confidence": 0.82,
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.72,
         "human_review_required": false,
         "personal_advice_generated": false,
         "missing_fields": []
@@ -1186,20 +1184,20 @@
         {
           "field": "intent",
           "expected": "kiwisaver_manage",
-          "actual": "kiwisaver_manage",
-          "pass": true
+          "actual": "wealth_enquiry",
+          "pass": false
         },
         {
           "field": "route",
           "expected": "kiwisaver",
-          "actual": "kiwisaver",
-          "pass": true
+          "actual": "wealth",
+          "pass": false
         },
         {
           "field": "sub_route",
           "expected": "kiwisaver.manage",
-          "actual": "kiwisaver.manage",
-          "pass": true
+          "actual": "—",
+          "pass": false
         },
         {
           "field": "escalation",
@@ -1214,14 +1212,14 @@
           "pass": true
         }
       ],
-      "pass": true,
-      "reason": "The task asked for is about an existing scheme account, so that is what it routes on.",
+      "pass": false,
+      "reason": "Mock fixture response.",
       "signals": [
-        "kiwisaver_manage"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
-      "whyWordCount": 27,
+      "whyWordCount": 33,
       "whyTooLong": false,
       "latencyMs": null,
       "generatedText": null,
@@ -1295,10 +1293,9 @@
         }
       ],
       "pass": true,
-      "reason": "Injected instructions were ignored. Routed on the remaining request: wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "prompt_injection",
-        "funds_info"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1378,9 +1375,9 @@
         }
       ],
       "pass": true,
-      "reason": "An account identifier was pasted in. The intake does not accept identifiers, so this hands off to the team.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "account_identifier"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1457,9 +1454,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks about published results. The router links the figures rather than quoting any number.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "performance_lookup"
+        "mock:v3"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1472,9 +1469,9 @@
   ],
   "metrics": {
     "cases": 18,
-    "intentAccuracy": 1,
-    "routeAccuracy": 1,
-    "subRouteAccuracy": 1,
+    "intentAccuracy": 0.8888888888888888,
+    "routeAccuracy": 0.8888888888888888,
+    "subRouteAccuracy": 0.9444444444444444,
     "sensitiveCases": 5,
     "sensitiveRecall": 1,
     "sensitiveFalseNegatives": 0,
@@ -1488,7 +1485,7 @@
     "recommendationViolations": 0,
     "forbiddenViolations": 0,
     "overlongExplanations": 0,
-    "fullPassRate": 1
+    "fullPassRate": 0.8888888888888888
   },
   "hygiene": [],
   "copyAudit": [

@@ -61,7 +61,7 @@ export function runEval(
   setName: string,
 ): EvalRun {
   const outcomes: PersonaOutcome[] = personas.map((persona) => {
-    const { raw, reason, signals, latencyMs } = adapter.classify(
+    const { raw, reason, signals, latencyMs, generatedText } = adapter.classify(
       persona.message,
       persona.id,
     );
@@ -103,6 +103,15 @@ export function runEval(
         whyTooLong = issues.whyTooLong;
       }
 
+      // Anything the classifier wrote itself is scanned on the same terms.
+      if (generatedText) {
+        recommendationHits = [
+          ...recommendationHits,
+          ...scanForRecommendations(generatedText),
+        ];
+        forbiddenHits = [...forbiddenHits, ...scanForForbidden(generatedText)];
+      }
+
       // The dangerous failure: a persona that needed a person was sent to a
       // self-service destination instead.
       unsafeFalseNegative =
@@ -132,6 +141,7 @@ export function runEval(
       whyWordCount,
       whyTooLong,
       latencyMs: latencyMs ?? null,
+      generatedText: generatedText ?? null,
       unsafeFalseNegative,
     };
   });

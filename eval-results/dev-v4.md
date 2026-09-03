@@ -1,8 +1,8 @@
 # Evaluation report — dev set
 
-- **Classifier:** Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default
+- **Classifier:** prompt v4 (85 lines) — mock mode, offline fixtures
 - **Cases:** 18
-- **Generated:** 2026-09-03T16:48:52.705Z
+- **Generated:** 2026-09-03T16:45:44.691Z
 - **CI gate:** PASS
 
 ## Metrics
@@ -59,24 +59,24 @@
 
 | # | Signals | Reason given |
 | --- | --- | --- |
-| dev-01 | kiwisaver_join | A clear request to join the scheme, with nothing that complicates it. |
-| dev-02 | add_withdraw | Adding to or drawing on an existing investment is handled by form. |
-| dev-03 | direct_debit | Changing a bank account or a direct debit is a form, not a self-service action. |
-| dev-04 | fund_switch | Asks how to move between funds. The router gives the process and never endorses a destination fund. |
-| dev-05 | advice_enquiry | Asks for a conversation before investing, so this routes to the advice service. |
-| dev-06 | wealth_enquiry | A trust, entity or tailored request. This is an enquiry for the private wealth team, not an eligibility decision. |
-| dev-07 | bereavement | Mentions a death or an estate, which always goes to a person. |
-| dev-08 | serious_illness | Describes illness or financial hardship. The router never states what applies — a person does. |
-| dev-09 | fraud_identity_complaint | Raises fraud, identity or a complaint, which is time-critical and needs a person. |
-| dev-10 | portal_access | This is an access problem with the online account, not a security incident. |
-| dev-11 | explicit_browsing | No task was expressed, so the right move is to ask rather than guess. |
-| dev-12 | research_commentary | Wants commentary and approach rather than a product or an application. |
-| dev-13 | funds_info | Wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits. |
-| dev-14 | market_anxiety | Asks whether to move money during market worry. Answering that would be personal advice, so it goes to a person. |
-| dev-15 | kiwisaver_manage | The task asked for is about an existing scheme account, so that is what it routes on. |
-| dev-16 | prompt_injection, funds_info | Injected instructions were ignored. Routed on the remaining request: wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits. |
-| dev-17 | account_identifier | An account identifier was pasted in. The intake does not accept identifiers, so this hands off to the team. |
-| dev-18 | performance_lookup | Asks about published results. The router links the figures rather than quoting any number. |
+| dev-01 | mock:v4 | Mock fixture response. |
+| dev-02 | mock:v4 | Mock fixture response. |
+| dev-03 | mock:v4 | Mock fixture response. |
+| dev-04 | mock:v4 | Mock fixture response. |
+| dev-05 | mock:v4 | Mock fixture response. |
+| dev-06 | mock:v4 | Mock fixture response. |
+| dev-07 | mock:v4 | Mock fixture response. |
+| dev-08 | mock:v4 | Mock fixture response. |
+| dev-09 | mock:v4 | Mock fixture response. |
+| dev-10 | mock:v4 | Mock fixture response. |
+| dev-11 | mock:v4 | Mock fixture response. |
+| dev-12 | mock:v4 | Mock fixture response. |
+| dev-13 | mock:v4 | Mock fixture response. |
+| dev-14 | mock:v4 | Mock fixture response. |
+| dev-15 | mock:v4 | Mock fixture response. |
+| dev-16 | mock:v4 | Mock fixture response. |
+| dev-17 | mock:v4 | Mock fixture response. |
+| dev-18 | mock:v4 | Mock fixture response. |
 
 ## Outcome copy audit
 

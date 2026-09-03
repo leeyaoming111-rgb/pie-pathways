@@ -30,6 +30,10 @@ const ALLOWED_KEYS = new Set([
   "human_review_required",
   "personal_advice_generated",
   "missing_fields",
+  // Optional, internal-only. Prompt v5 asks for a one-line rationale; it is
+  // never shown to a visitor, but it is permitted so the field itself does not
+  // register as a schema violation.
+  "rationale",
 ]);
 
 export function validateSchema(value: unknown): SchemaIssue[] {
@@ -93,6 +97,10 @@ export function validateSchema(value: unknown): SchemaIssue[] {
       field: "personal_advice_generated",
       problem: "must never be true — this router does not give personal advice",
     });
+  }
+
+  if (r.rationale !== undefined && typeof r.rationale !== "string") {
+    issues.push({ field: "rationale", problem: "must be a string when present" });
   }
 
   if (

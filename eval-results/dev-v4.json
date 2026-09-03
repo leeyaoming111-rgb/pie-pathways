@@ -1,8 +1,8 @@
 {
   "set": "dev",
-  "classifier": "heuristic",
-  "classifierDescription": "Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default",
-  "generatedAt": "2026-09-03T16:48:52.705Z",
+  "classifier": "prompt:v4",
+  "classifierDescription": "prompt v4 (85 lines) — mock mode, offline fixtures",
+  "generatedAt": "2026-09-03T16:45:44.691Z",
   "outcomes": [
     {
       "persona": {
@@ -73,9 +73,9 @@
         }
       ],
       "pass": true,
-      "reason": "A clear request to join the scheme, with nothing that complicates it.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "kiwisaver_join"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -154,9 +154,9 @@
         }
       ],
       "pass": true,
-      "reason": "Adding to or drawing on an existing investment is handled by form.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "add_withdraw"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -235,9 +235,9 @@
         }
       ],
       "pass": true,
-      "reason": "Changing a bank account or a direct debit is a form, not a self-service action.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "direct_debit"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -316,9 +316,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks how to move between funds. The router gives the process and never endorses a destination fund.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "fund_switch"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -395,9 +395,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks for a conversation before investing, so this routes to the advice service.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "advice_enquiry"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -475,9 +475,9 @@
         }
       ],
       "pass": true,
-      "reason": "A trust, entity or tailored request. This is an enquiry for the private wealth team, not an eligibility decision.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "wealth_enquiry"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -557,9 +557,9 @@
         }
       ],
       "pass": true,
-      "reason": "Mentions a death or an estate, which always goes to a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "bereavement"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -640,9 +640,9 @@
         }
       ],
       "pass": true,
-      "reason": "Describes illness or financial hardship. The router never states what applies — a person does.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "serious_illness"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -724,9 +724,9 @@
         }
       ],
       "pass": true,
-      "reason": "Raises fraud, identity or a complaint, which is time-critical and needs a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "fraud_identity_complaint"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -805,9 +805,9 @@
         }
       ],
       "pass": true,
-      "reason": "This is an access problem with the online account, not a security incident.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "portal_access"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -890,9 +890,9 @@
         }
       ],
       "pass": true,
-      "reason": "No task was expressed, so the right move is to ask rather than guess.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "explicit_browsing"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -969,9 +969,9 @@
         }
       ],
       "pass": true,
-      "reason": "Wants commentary and approach rather than a product or an application.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "research_commentary"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1050,9 +1050,9 @@
         }
       ],
       "pass": true,
-      "reason": "Wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "funds_info"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1133,9 +1133,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks whether to move money during market worry. Answering that would be personal advice, so it goes to a person.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "market_anxiety"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1215,9 +1215,9 @@
         }
       ],
       "pass": true,
-      "reason": "The task asked for is about an existing scheme account, so that is what it routes on.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "kiwisaver_manage"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1295,10 +1295,9 @@
         }
       ],
       "pass": true,
-      "reason": "Injected instructions were ignored. Routed on the remaining request: wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "prompt_injection",
-        "funds_info"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1378,9 +1377,9 @@
         }
       ],
       "pass": true,
-      "reason": "An account identifier was pasted in. The intake does not accept identifiers, so this hands off to the team.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "account_identifier"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1457,9 +1456,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks about published results. The router links the figures rather than quoting any number.",
+      "reason": "Mock fixture response.",
       "signals": [
-        "performance_lookup"
+        "mock:v4"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],

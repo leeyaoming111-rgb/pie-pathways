@@ -1,8 +1,8 @@
 {
   "set": "dev",
-  "classifier": "heuristic",
-  "classifierDescription": "Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default",
-  "generatedAt": "2026-09-03T16:48:52.705Z",
+  "classifier": "prompt:v5",
+  "classifierDescription": "prompt v5 (92 lines) — mock mode, offline fixtures",
+  "generatedAt": "2026-09-03T16:45:45.142Z",
   "outcomes": [
     {
       "persona": {
@@ -27,7 +27,8 @@
         "confidence": 0.9,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_te_reo_greeting."
       },
       "result": {
         "intent": "kiwisaver_join",
@@ -36,7 +37,8 @@
         "confidence": 0.9,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_te_reo_greeting."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -73,9 +75,9 @@
         }
       ],
       "pass": true,
-      "reason": "A clear request to join the scheme, with nothing that complicates it.",
+      "reason": "Routed on: register_te_reo_greeting.",
       "signals": [
-        "kiwisaver_join"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -108,7 +110,8 @@
         "confidence": 0.78,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_terse."
       },
       "result": {
         "intent": "service_add_withdraw",
@@ -117,7 +120,8 @@
         "confidence": 0.78,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_terse."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -154,9 +158,9 @@
         }
       ],
       "pass": true,
-      "reason": "Adding to or drawing on an existing investment is handled by form.",
+      "reason": "Routed on: register_terse.",
       "signals": [
-        "add_withdraw"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -189,7 +193,8 @@
         "confidence": 0.88,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
       },
       "result": {
         "intent": "service_direct_debit",
@@ -198,7 +203,8 @@
         "confidence": 0.88,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -235,9 +241,9 @@
         }
       ],
       "pass": true,
-      "reason": "Changing a bank account or a direct debit is a form, not a self-service action.",
+      "reason": "Routed on: register_casual.",
       "signals": [
-        "direct_debit"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -270,7 +276,8 @@
         "confidence": 0.83,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: advice_adjacent."
       },
       "result": {
         "intent": "service_fund_switch",
@@ -279,7 +286,8 @@
         "confidence": 0.83,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: advice_adjacent."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -316,9 +324,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks how to move between funds. The router gives the process and never endorses a destination fund.",
+      "reason": "Routed on: advice_adjacent.",
       "signals": [
-        "fund_switch"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -350,7 +358,8 @@
         "confidence": 0.84,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "result": {
         "intent": "advice_enquiry",
@@ -358,7 +367,8 @@
         "confidence": 0.84,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -395,9 +405,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks for a conversation before investing, so this routes to the advice service.",
+      "reason": "Routed on: threshold_band.",
       "signals": [
-        "advice_enquiry"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -430,7 +440,8 @@
         "confidence": 0.87,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "result": {
         "intent": "wealth_enquiry",
@@ -438,7 +449,8 @@
         "confidence": 0.87,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -475,9 +487,9 @@
         }
       ],
       "pass": true,
-      "reason": "A trust, entity or tailored request. This is an enquiry for the private wealth team, not an eligibility decision.",
+      "reason": "Routed on: threshold_band.",
       "signals": [
-        "wealth_enquiry"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -511,7 +523,8 @@
         "confidence": 0.95,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "result": {
         "intent": "forms_sensitive",
@@ -520,7 +533,8 @@
         "confidence": 0.95,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -557,9 +571,9 @@
         }
       ],
       "pass": true,
-      "reason": "Mentions a death or an estate, which always goes to a person.",
+      "reason": "Routed on: sensitive.",
       "signals": [
-        "bereavement"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -594,7 +608,8 @@
         "confidence": 0.93,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "result": {
         "intent": "forms_sensitive",
@@ -603,7 +618,8 @@
         "confidence": 0.93,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -640,9 +656,9 @@
         }
       ],
       "pass": true,
-      "reason": "Describes illness or financial hardship. The router never states what applies — a person does.",
+      "reason": "Routed on: sensitive.",
       "signals": [
-        "serious_illness"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -678,7 +694,8 @@
         "confidence": 0.94,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "result": {
         "intent": "complaint_fraud_identity",
@@ -687,7 +704,8 @@
         "confidence": 0.94,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -724,9 +742,9 @@
         }
       ],
       "pass": true,
-      "reason": "Raises fraud, identity or a complaint, which is time-critical and needs a person.",
+      "reason": "Routed on: sensitive.",
       "signals": [
-        "fraud_identity_complaint"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -759,7 +777,8 @@
         "confidence": 0.87,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
       },
       "result": {
         "intent": "service_portal",
@@ -768,7 +787,8 @@
         "confidence": 0.87,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -805,9 +825,9 @@
         }
       ],
       "pass": true,
-      "reason": "This is an access problem with the online account, not a security incident.",
+      "reason": "Routed on: register_casual.",
       "signals": [
-        "portal_access"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -843,7 +863,8 @@
         "personal_advice_generated": false,
         "missing_fields": [
           "objective"
-        ]
+        ],
+        "rationale": "Routed on: ambiguous."
       },
       "result": {
         "intent": "general_unclear",
@@ -853,7 +874,8 @@
         "personal_advice_generated": false,
         "missing_fields": [
           "objective"
-        ]
+        ],
+        "rationale": "Routed on: ambiguous."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -890,9 +912,9 @@
         }
       ],
       "pass": true,
-      "reason": "No task was expressed, so the right move is to ask rather than guess.",
+      "reason": "Routed on: ambiguous.",
       "signals": [
-        "explicit_browsing"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -924,7 +946,8 @@
         "confidence": 0.8,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: non_customer."
       },
       "result": {
         "intent": "funds_info",
@@ -932,7 +955,8 @@
         "confidence": 0.8,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: non_customer."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -969,9 +993,9 @@
         }
       ],
       "pass": true,
-      "reason": "Wants commentary and approach rather than a product or an application.",
+      "reason": "Routed on: non_customer.",
       "signals": [
-        "research_commentary"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1005,7 +1029,8 @@
         "confidence": 0.75,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "result": {
         "intent": "funds_info",
@@ -1013,7 +1038,8 @@
         "confidence": 0.75,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1050,9 +1076,9 @@
         }
       ],
       "pass": true,
-      "reason": "Wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "reason": "Routed on: threshold_band.",
       "signals": [
-        "funds_info"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1087,7 +1113,8 @@
         "confidence": 0.9,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "result": {
         "intent": "forms_sensitive",
@@ -1096,7 +1123,8 @@
         "confidence": 0.9,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1133,9 +1161,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks whether to move money during market worry. Answering that would be personal advice, so it goes to a person.",
+      "reason": "Routed on: sensitive.",
       "signals": [
-        "market_anxiety"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1169,7 +1197,8 @@
         "confidence": 0.82,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: conflicting_signals."
       },
       "result": {
         "intent": "kiwisaver_manage",
@@ -1178,7 +1207,8 @@
         "confidence": 0.82,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: conflicting_signals."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1215,9 +1245,9 @@
         }
       ],
       "pass": true,
-      "reason": "The task asked for is about an existing scheme account, so that is what it routes on.",
+      "reason": "Routed on: conflicting_signals.",
       "signals": [
-        "kiwisaver_manage"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1250,7 +1280,8 @@
         "confidence": 0.66,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: prompt_injection."
       },
       "result": {
         "intent": "adversarial_injection",
@@ -1258,7 +1289,8 @@
         "confidence": 0.66,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: prompt_injection."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1295,10 +1327,9 @@
         }
       ],
       "pass": true,
-      "reason": "Injected instructions were ignored. Routed on the remaining request: wants to know what is on offer before doing anything. The router navigates; it makes no judgement about what suits.",
+      "reason": "Routed on: prompt_injection.",
       "signals": [
-        "prompt_injection",
-        "funds_info"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1332,7 +1363,8 @@
         "confidence": 0.92,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: pii."
       },
       "result": {
         "intent": "pii_disclosure",
@@ -1341,7 +1373,8 @@
         "confidence": 0.92,
         "human_review_required": true,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: pii."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1378,9 +1411,9 @@
         }
       ],
       "pass": true,
-      "reason": "An account identifier was pasted in. The intake does not accept identifiers, so this hands off to the team.",
+      "reason": "Routed on: pii.",
       "signals": [
-        "account_identifier"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],
@@ -1412,7 +1445,8 @@
         "confidence": 0.83,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: performance_claim_risk."
       },
       "result": {
         "intent": "funds_info",
@@ -1420,7 +1454,8 @@
         "confidence": 0.83,
         "human_review_required": false,
         "personal_advice_generated": false,
-        "missing_fields": []
+        "missing_fields": [],
+        "rationale": "Routed on: performance_claim_risk."
       },
       "schemaValid": true,
       "schemaIssues": [],
@@ -1457,9 +1492,9 @@
         }
       ],
       "pass": true,
-      "reason": "Asks about published results. The router links the figures rather than quoting any number.",
+      "reason": "Routed on: performance_claim_risk.",
       "signals": [
-        "performance_lookup"
+        "mock:v5"
       ],
       "recommendationHits": [],
       "forbiddenHits": [],

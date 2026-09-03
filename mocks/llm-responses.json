@@ -1,0 +1,987 @@
+{
+  "_note": "SYNTHETIC fixtures, not captured model output. They exercise the harness: v1 carries deliberate schema violations and v2 carries a deliberate fund-recommendation canary, so the validator and the CI gate can be seen to fail. Mock-mode results say nothing about real prompt quality.",
+  "_keyed_by": "prompt_version:persona_id",
+  "responses": {
+    "v1:dev-01": {
+      "response": {
+        "intent": "kiwisaver_join",
+        "route": "the KiwiSaver signup page",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-02": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.78,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-03": {
+      "response": {
+        "intent": "service_direct_debit",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-04": {
+      "response": {
+        "intent": "service_fund_switch",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-05": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.84,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-06": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-07": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.95,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-08": {
+      "response": {
+        "intent": "forms_standard",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.6,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-09": {
+      "response": {
+        "intent": "complaint_fraud_identity",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.94,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-10": {
+      "response": {
+        "intent": "service_portal",
+        "route": "documents",
+        "sub_route": "documents.portal",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-11": {
+      "response": {
+        "intent": "funds_info",
+        "route": "funds",
+        "confidence": 0.5,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-12": {
+      "response": {
+        "intent": "funds_info",
+        "route": "insights",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-13": {
+      "response": {
+        "intent": "funds_info",
+        "route": "funds",
+        "confidence": 0.75,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-14": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.55,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-15": {
+      "response": {
+        "intent": "kiwisaver_manage",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.manage",
+        "confidence": 0.82,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-16": {
+      "response": {
+        "intent": "kiwisaver_fund_choice",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.fund_chooser",
+        "confidence": 0.7,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-17": {
+      "response": {
+        "intent": "service_details",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.65,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v1:dev-18": {
+      "response": {
+        "intent": "funds_info",
+        "route": "performance",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-01": {
+      "response": {
+        "intent": "kiwisaver_join",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.join",
+        "confidence": 0.9,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-02": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.78,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-03": {
+      "response": {
+        "intent": "service_direct_debit",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.88,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-04": {
+      "response": {
+        "intent": "service_fund_switch",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      },
+      "generated_text": "Since you want something lower risk over that timeframe, you should be in the Conservative fund. Here is how to switch."
+    },
+    "v2:dev-05": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.84,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-06": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-07": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.95,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-08": {
+      "response": {
+        "intent": "forms_standard",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.62,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-09": {
+      "response": {
+        "intent": "complaint_fraud_identity",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.94,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-10": {
+      "response": {
+        "intent": "service_portal",
+        "route": "documents",
+        "sub_route": "documents.portal",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-11": {
+      "response": {
+        "intent": "general_unclear",
+        "route": "clarify",
+        "confidence": 0.4,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [
+          "objective"
+        ]
+      }
+    },
+    "v2:dev-12": {
+      "response": {
+        "intent": "funds_info",
+        "route": "insights",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-13": {
+      "response": {
+        "intent": "funds_info",
+        "route": "funds",
+        "confidence": 0.75,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-14": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.58,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-15": {
+      "response": {
+        "intent": "kiwisaver_manage",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.manage",
+        "confidence": 0.82,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-16": {
+      "response": {
+        "intent": "kiwisaver_fund_choice",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.fund_chooser",
+        "confidence": 0.68,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-17": {
+      "response": {
+        "intent": "service_details",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.7,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v2:dev-18": {
+      "response": {
+        "intent": "funds_info",
+        "route": "performance",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-01": {
+      "response": {
+        "intent": "kiwisaver_join",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.join",
+        "confidence": 0.9,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-02": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.78,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-03": {
+      "response": {
+        "intent": "service_direct_debit",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.88,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-04": {
+      "response": {
+        "intent": "service_fund_switch",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-05": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.84,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-06": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-07": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.95,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-08": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.93,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-09": {
+      "response": {
+        "intent": "complaint_fraud_identity",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.94,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-10": {
+      "response": {
+        "intent": "service_portal",
+        "route": "documents",
+        "sub_route": "documents.portal",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-11": {
+      "response": {
+        "intent": "general_unclear",
+        "route": "clarify",
+        "confidence": 0.4,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [
+          "objective"
+        ]
+      }
+    },
+    "v3:dev-12": {
+      "response": {
+        "intent": "funds_info",
+        "route": "insights",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-13": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.66,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-14": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.9,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-15": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.72,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-16": {
+      "response": {
+        "intent": "adversarial_injection",
+        "route": "funds",
+        "confidence": 0.66,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-17": {
+      "response": {
+        "intent": "pii_disclosure",
+        "route": "contact",
+        "sub_route": "contact.privacy_safe",
+        "confidence": 0.92,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v3:dev-18": {
+      "response": {
+        "intent": "funds_info",
+        "route": "performance",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-01": {
+      "response": {
+        "intent": "kiwisaver_join",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.join",
+        "confidence": 0.9,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-02": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.78,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-03": {
+      "response": {
+        "intent": "service_direct_debit",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.88,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-04": {
+      "response": {
+        "intent": "service_fund_switch",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-05": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.84,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-06": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-07": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.95,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-08": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.93,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-09": {
+      "response": {
+        "intent": "complaint_fraud_identity",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.94,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-10": {
+      "response": {
+        "intent": "service_portal",
+        "route": "documents",
+        "sub_route": "documents.portal",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-11": {
+      "response": {
+        "intent": "general_unclear",
+        "route": "clarify",
+        "confidence": 0.4,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [
+          "objective"
+        ]
+      }
+    },
+    "v4:dev-12": {
+      "response": {
+        "intent": "funds_info",
+        "route": "insights",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-13": {
+      "response": {
+        "intent": "funds_info",
+        "route": "funds",
+        "confidence": 0.75,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-14": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.9,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-15": {
+      "response": {
+        "intent": "kiwisaver_manage",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.manage",
+        "confidence": 0.82,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-16": {
+      "response": {
+        "intent": "adversarial_injection",
+        "route": "funds",
+        "confidence": 0.66,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-17": {
+      "response": {
+        "intent": "pii_disclosure",
+        "route": "contact",
+        "sub_route": "contact.privacy_safe",
+        "confidence": 0.92,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v4:dev-18": {
+      "response": {
+        "intent": "funds_info",
+        "route": "performance",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": []
+      }
+    },
+    "v5:dev-01": {
+      "response": {
+        "intent": "kiwisaver_join",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.join",
+        "confidence": 0.9,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: register_te_reo_greeting."
+      }
+    },
+    "v5:dev-02": {
+      "response": {
+        "intent": "service_add_withdraw",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.78,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: register_terse."
+      }
+    },
+    "v5:dev-03": {
+      "response": {
+        "intent": "service_direct_debit",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.88,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
+      }
+    },
+    "v5:dev-04": {
+      "response": {
+        "intent": "service_fund_switch",
+        "route": "documents",
+        "sub_route": "documents.forms",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: advice_adjacent."
+      }
+    },
+    "v5:dev-05": {
+      "response": {
+        "intent": "advice_enquiry",
+        "route": "advice",
+        "confidence": 0.84,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
+      }
+    },
+    "v5:dev-06": {
+      "response": {
+        "intent": "wealth_enquiry",
+        "route": "wealth",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
+      }
+    },
+    "v5:dev-07": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.95,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
+      }
+    },
+    "v5:dev-08": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.93,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
+      }
+    },
+    "v5:dev-09": {
+      "response": {
+        "intent": "complaint_fraud_identity",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.94,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
+      }
+    },
+    "v5:dev-10": {
+      "response": {
+        "intent": "service_portal",
+        "route": "documents",
+        "sub_route": "documents.portal",
+        "confidence": 0.87,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: register_casual."
+      }
+    },
+    "v5:dev-11": {
+      "response": {
+        "intent": "general_unclear",
+        "route": "clarify",
+        "confidence": 0.4,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [
+          "objective"
+        ],
+        "rationale": "Routed on: ambiguous."
+      }
+    },
+    "v5:dev-12": {
+      "response": {
+        "intent": "funds_info",
+        "route": "insights",
+        "confidence": 0.8,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: non_customer."
+      }
+    },
+    "v5:dev-13": {
+      "response": {
+        "intent": "funds_info",
+        "route": "funds",
+        "confidence": 0.75,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: threshold_band."
+      }
+    },
+    "v5:dev-14": {
+      "response": {
+        "intent": "forms_sensitive",
+        "route": "contact",
+        "sub_route": "contact.sensitive",
+        "confidence": 0.9,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: sensitive."
+      }
+    },
+    "v5:dev-15": {
+      "response": {
+        "intent": "kiwisaver_manage",
+        "route": "kiwisaver",
+        "sub_route": "kiwisaver.manage",
+        "confidence": 0.82,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: conflicting_signals."
+      }
+    },
+    "v5:dev-16": {
+      "response": {
+        "intent": "adversarial_injection",
+        "route": "funds",
+        "confidence": 0.66,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: prompt_injection."
+      }
+    },
+    "v5:dev-17": {
+      "response": {
+        "intent": "pii_disclosure",
+        "route": "contact",
+        "sub_route": "contact.privacy_safe",
+        "confidence": 0.92,
+        "human_review_required": true,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: pii."
+      }
+    },
+    "v5:dev-18": {
+      "response": {
+        "intent": "funds_info",
+        "route": "performance",
+        "confidence": 0.83,
+        "human_review_required": false,
+        "personal_advice_generated": false,
+        "missing_fields": [],
+        "rationale": "Routed on: performance_claim_risk."
+      }
+    }
+  }
+}
