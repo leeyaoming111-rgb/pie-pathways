@@ -2,7 +2,7 @@
   "set": "holdout",
   "classifier": "heuristic",
   "classifierDescription": "Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default",
-  "generatedAt": "2026-09-03T16:40:10.014Z",
+  "generatedAt": "2026-09-03T16:51:44.757Z",
   "outcomes": [
     {
       "persona": {
@@ -82,6 +82,7 @@
       "whyWordCount": 31,
       "whyTooLong": false,
       "latencyMs": null,
+      "generatedText": null,
       "unsafeFalseNegative": false
     },
     {
@@ -162,6 +163,7 @@
       "whyWordCount": 31,
       "whyTooLong": false,
       "latencyMs": null,
+      "generatedText": null,
       "unsafeFalseNegative": false
     },
     {
@@ -243,6 +245,7 @@
       "whyWordCount": 32,
       "whyTooLong": false,
       "latencyMs": null,
+      "generatedText": null,
       "unsafeFalseNegative": false
     },
     {
@@ -321,6 +324,7 @@
       "whyWordCount": 30,
       "whyTooLong": false,
       "latencyMs": null,
+      "generatedText": null,
       "unsafeFalseNegative": false
     },
     {
@@ -401,6 +405,7 @@
       "whyWordCount": 30,
       "whyTooLong": false,
       "latencyMs": null,
+      "generatedText": null,
       "unsafeFalseNegative": false
     }
   ],
