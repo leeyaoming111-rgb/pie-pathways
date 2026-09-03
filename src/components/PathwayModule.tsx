@@ -125,7 +125,13 @@ export function PathwayModule() {
             )}
 
             {resolution.status === "free_text" && (
-              <FreeTextBranch onBack={history.length > 0 ? goBack : undefined} />
+              <FreeTextBranch
+                onBack={history.length > 0 ? goBack : undefined}
+                onClarify={(objective) => {
+                  setHistory((h) => [...h, state]);
+                  setState({ ...state, objective });
+                }}
+              />
             )}
 
             {resolution.status === "resolved" && (

@@ -2,7 +2,7 @@
 
 - **Classifier:** Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default
 - **Cases:** 18
-- **Generated:** 2026-09-03T16:40:05.216Z
+- **Generated:** 2026-09-03T16:40:56.117Z
 - **CI gate:** PASS
 
 ## Metrics

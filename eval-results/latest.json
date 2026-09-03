@@ -2,7 +2,7 @@
   "set": "dev",
   "classifier": "heuristic",
   "classifierDescription": "Deterministic heuristic classifier (src/lib/classify.ts) — the shipped default",
-  "generatedAt": "2026-09-03T16:40:05.216Z",
+  "generatedAt": "2026-09-03T16:40:56.117Z",
   "outcomes": [
     {
       "persona": {

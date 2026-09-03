@@ -63,6 +63,27 @@ const mdName = setName === "dev" && !promptVersion ? "report.md" : `${slug}.md`;
 writeFileSync(resolve(outDir, jsonName), `${JSON.stringify(run, null, 2)}\n`, "utf8");
 writeFileSync(resolve(outDir, mdName), renderMarkdown(run), "utf8");
 
+/*
+ * A small summary the app imports for its "how this would be hardened" panel.
+ * Only the dev run writes it: that is the set the panel reports on, and the
+ * holdout is final evidence rather than a dashboard.
+ */
+if (setName === "dev" && !promptVersion) {
+  const summary = {
+    set: run.set,
+    classifier: run.classifier,
+    generatedAt: run.generatedAt,
+    metrics: run.metrics,
+    gate: run.gate,
+    copyBlocksScanned: run.copyAudit.length,
+  };
+  writeFileSync(
+    resolve(outDir, "summary.json"),
+    `${JSON.stringify(summary, null, 2)}\n`,
+    "utf8",
+  );
+}
+
 console.log(`Saved eval-results/${jsonName} and eval-results/${mdName}`);
 
 if (ci && !run.gate.passed) {

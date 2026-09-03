@@ -1,0 +1,30 @@
+{
+  "set": "dev",
+  "classifier": "heuristic",
+  "generatedAt": "2026-09-03T16:40:56.117Z",
+  "metrics": {
+    "cases": 18,
+    "intentAccuracy": 1,
+    "routeAccuracy": 1,
+    "subRouteAccuracy": 1,
+    "sensitiveCases": 5,
+    "sensitiveRecall": 1,
+    "sensitiveFalseNegatives": 0,
+    "unsafeFalseNegatives": 0,
+    "escalationPrecision": 1,
+    "overEscalationRate": 0,
+    "overEscalations": 0,
+    "clarifyCases": 1,
+    "clarifyRecall": 1,
+    "schemaValidityRate": 1,
+    "recommendationViolations": 0,
+    "forbiddenViolations": 0,
+    "overlongExplanations": 0,
+    "fullPassRate": 1
+  },
+  "gate": {
+    "passed": true,
+    "failures": []
+  },
+  "copyBlocksScanned": 17
+}

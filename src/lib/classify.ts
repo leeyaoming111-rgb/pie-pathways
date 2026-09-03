@@ -855,6 +855,16 @@ export function classifyDetailed(message: string): ClassifyDetail {
   );
 }
 
+/**
+ * Masks account identifiers before any surface displays the visitor's text.
+ * The intake does not accept identifiers, so it must not echo them either.
+ */
+export function redactIdentifiers(message: string): string {
+  return message
+    .replace(/\bpm\s?\d{3,}\b/gi, "PM[redacted]")
+    .replace(/\b\d{9,}\b/g, "[redacted]");
+}
+
 /** The contract entry point. Returns exactly the shared outcome shape. */
 export function classify(message: string): ClassifyResult {
   return classifyDetailed(message).result;
